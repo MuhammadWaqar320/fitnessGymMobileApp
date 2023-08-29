@@ -22,8 +22,8 @@ const SplashScreen = ({navigation}) => {
         />
       </View>
       <View>
-        <Text style={{fontStyle: 'italic', fontSize: 24, color: '#ff5421'}}>
-          Fitness Gym
+        <Text style={{fontStyle: 'italic', fontSize: 24, color: '#ff5421',textAlign:'center'}}>
+          FIT_INN
         </Text>
       </View>
     </View>
