@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
-import React, {useEffect, useRef, useState,useContext} from 'react';
+import React, {useEffect, useRef, useState, useContext} from 'react';
 import pic from '../assets/sub.jpg';
 import {useNavigation} from '@react-navigation/native';
 import RBSheet from 'react-native-raw-bottom-sheet';
@@ -139,12 +139,12 @@ const FGCard1 = ({product, index, futureTimeInS, user}) => {
 const Subscription = ({route}) => {
   const userId = route.params.userId;
   const registerDate = route.params?.userData?.registerDate;
-    const {
-      loggedInTrainer,
-      setLoggedInTrainer,
-      loggedInCustomer,
-      setLoggedInCustomer,
-    } = useContext(CreateContext);
+  const {
+    loggedInTrainer,
+    setLoggedInTrainer,
+    loggedInCustomer,
+    setLoggedInCustomer,
+  } = useContext(CreateContext);
   const sevenDaysInSeconds = 7 * 24 * 60 * 60;
   const timeInS = registerDate?.seconds;
   const futureTimeInS = timeInS + sevenDaysInSeconds;
@@ -158,7 +158,7 @@ const Subscription = ({route}) => {
     {
       id: 16,
       heading: 'Plan Basic',
-      price: '50.000Rs/mes',
+      price: '50$/month',
       value: '50Rs',
       arrayData: [
         'Personal trainer',
@@ -171,7 +171,7 @@ const Subscription = ({route}) => {
     {
       id: 26,
       heading: 'Plan Premium',
-      price: '70.000Rs/mes',
+      price: '70$/month',
       value: '70Rs',
       arrayData: [
         'Personal trainer',
@@ -184,7 +184,7 @@ const Subscription = ({route}) => {
     {
       id: 36,
       heading: 'Plan Definitive',
-      price: '100.000Rs/mes',
+      price: '100$/month',
       value: '$100Rs',
       arrayData: [
         'Personal trainer',
